@@ -37,10 +37,15 @@ let createPost = () => {
         <p>${data.text}</p>
         
         <span class="options">
-            <i class="fa-solid fa-trash-can" onClick="editPost(this)" ></i>
-            <i class="fa-solid fa-pen-to-square" onClick="deletePost(this)"></i>
+            <i class="fa-solid fa-trash-can" onClick="deletePost(this)" ></i>
+            
+            <i class="fa-solid fa-pen-to-square" onClick="editPost(this)"></i>
         </span>
     </div>
     `;  
     input.value = "";
+}
+
+let deletePost = (e) => {
+    e.parentElement.parentElement.remove();
 }
